@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { VideoList } from '@/components/VideoList';
+import { HeroVideo } from '@/components/HeroVideo';
 import { EmptyState } from '@/components/EmptyState';
 
 interface Video {
@@ -41,6 +42,8 @@ export default async function Home() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Video Player</h1>
           <p className="text-xl text-slate-300">Select a video to start watching</p>
         </div>
+
+        <HeroVideo />
 
         {videos.length === 0 ? (
           <EmptyState />
